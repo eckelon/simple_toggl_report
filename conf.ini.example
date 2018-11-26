@@ -1,0 +1,5 @@
+; edit this file with your credentials and rename it to conf.ini
+[DEFAULT]
+token = your_token
+workspace_id = the_workspace_id
+default_project = default_project
