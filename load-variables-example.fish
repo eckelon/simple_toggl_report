@@ -1,0 +1,6 @@
+# Rename this file to load-variables.fish and edit the variables
+set -gx STR_TOGGL_TOKEN "YOUR TOKEN"
+set -gx STR_WORKSPACE_ID "YOUR WORKSPACE ID"
+set -gx STR_DEFAULT_PROJECT "YOUR DEFAULT PROJECT NAME"
+set -gx STR_SLACK_TOKEN "SLACK APP OAUTH TOKEN"
+set -gx STR_NOTIFICATION_CHANNEL "CHANNEL OR USER"

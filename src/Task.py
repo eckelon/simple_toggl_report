@@ -18,3 +18,10 @@ class Task(object):
 
     def __str__(self):
         return "{} ({}) -> {}h".format(self._name, self._project, self._hours)
+
+    def serialize(self):
+        return {
+            'name' : self._name,
+            'project' : self._project,
+            'hours' : self._hours
+        }
