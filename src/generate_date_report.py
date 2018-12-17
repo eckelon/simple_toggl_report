@@ -7,4 +7,4 @@ from .utils import conf_manager
 token = conf_manager.get_token()
 daily_date = date.today() if args_parser.get_parser().parse_args().start_date is None else args_parser.get_parser().parse_args().start_date
 
-Activity(token, daily_date).render()
+Activity(token, daily_date, conf_manager.get_workspace_id()).render()

@@ -7,11 +7,12 @@ from .Task import Task
 
 
 class Activity(object):
-    def __init__(self, token, daily_date):
+    def __init__(self, token, daily_date, workspace_id):
         self._daily_date = daily_date
         self._activity = {}
         self._total_hours = 0
         self._token = token
+        self._workspace_id = workspace_id
 
     def millis_to_hours(self, millis):
         return round(millis / 3600000, 2)
@@ -32,7 +33,7 @@ class Activity(object):
         self._username = me_info['data']['fullname']
 
         summary_url = toggl_urls.summary + "?workspace_id={}&since={}&until={}&user_agent=api_test".format(
-            conf_manager.get_workspace_id(), self.report_day, self.report_day)
+            self._workspace_id, self.report_day, self.report_day)
         response = toggl.request(summary_url)
 
         activity = {}
